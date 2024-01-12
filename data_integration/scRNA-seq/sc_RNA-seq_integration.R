@@ -15,7 +15,7 @@ ifnb
 
 
 ### Perform analysis without integration
-# run standard anlaysis workflow
+# run standard analysis workflow
 ifnb <- NormalizeData(ifnb)
 ifnb <- FindVariableFeatures(ifnb)
 ifnb <- ScaleData(ifnb)
@@ -60,7 +60,7 @@ DotPlot(ifnb, features = markers.to.plot, cols = c("blue", "red"), dot.scale = 8
   RotatedAxis()
 
 
-### Identify differntial expressed genes across conditions
+### Identify differntially expressed genes across conditions
 library(ggplot2)
 library(cowplot)
 theme_set(theme_cowplot())
@@ -84,9 +84,8 @@ b.interferon.response <- FindMarkers(ifnb, ident.1 = "B_STIM", ident.2 = "B_CTRL
 head(b.interferon.response, n = 15)
 
 
-FeaturePlot(ifnb, features = c("CD3D", "GNLY", "IFI6"), split.by = "stim", max.cutoff = 3, cols = c("grey",
-                                   
-                                                                                                                                                                     "red"), reduction = "umap")
+FeaturePlot(ifnb, features = c("CD3D", "GNLY", "IFI6"), split.by = "stim", max.cutoff = 3, 
+            cols = c("grey", "red"), reduction = "umap")
 plots <- VlnPlot(ifnb, features = c("LYZ", "ISG15", "CXCL10"), split.by = "stim", group.by = "seurat_annotations",
                  pt.size = 0, combine = FALSE)
 wrap_plots(plots = plots, ncol = 1)
