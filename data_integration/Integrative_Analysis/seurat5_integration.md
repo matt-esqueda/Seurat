@@ -92,7 +92,7 @@ obj <- FindClusters(obj, resolution = 2, cluster.name = "unintegrated_clusters")
     ## Running Louvain algorithm...
     ## Maximum modularity in 10 random starts: 0.8981
     ## Number of communities: 48
-    ## Elapsed time: 0 seconds
+    ## Elapsed time: 1 seconds
 
 ``` r
 obj <- RunUMAP(obj, dims = 1:30, reduction = "pca", reduction.name = "umap.unintegrated")
@@ -160,7 +160,7 @@ obj <- FindClusters(obj, resolution = 2, cluster.name = "cca_clusters")
     ## Running Louvain algorithm...
     ## Maximum modularity in 10 random starts: 0.8056
     ## Number of communities: 25
-    ## Elapsed time: 2 seconds
+    ## Elapsed time: 1 seconds
 
 ``` r
 obj <- RunUMAP(obj, reduction = "integrated.cca", dims = 1:30, reduction.name = "umap.cca")
@@ -186,7 +186,7 @@ obj <- FindClusters(obj, resolution = 2, cluster.name = "rpca_clusters")
     ## Running Louvain algorithm...
     ## Maximum modularity in 10 random starts: 0.7953
     ## Number of communities: 26
-    ## Elapsed time: 2 seconds
+    ## Elapsed time: 1 seconds
 
 ``` r
 obj <- RunUMAP(obj, reduction = "integrated.rpca", dims = 1:30, reduction.name = "umap.rpca")
@@ -220,7 +220,7 @@ obj <- FindClusters(obj, resolution = 2, cluster.name = "harmony_clusters")
     ## Running Louvain algorithm...
     ## Maximum modularity in 10 random starts: 0.7903
     ## Number of communities: 24
-    ## Elapsed time: 2 seconds
+    ## Elapsed time: 1 seconds
 
 ``` r
 obj <- RunUMAP(obj, reduction = "harmony", dims = 1:30, reduction.name = "umap.harmony")
