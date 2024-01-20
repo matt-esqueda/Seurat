@@ -73,7 +73,7 @@ pancreas.ref <- RunUMAP(pancreas.ref, dims = 1:30)
 DimPlot(pancreas.ref, group.by = c("celltype", "tech"))
 ```
 
-![](integration_mapping_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+<img src="integration_mapping_files/figure-gfm/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
 
 Integrate the datasets into a shared reference.
 
@@ -99,7 +99,7 @@ pancreas.ref <- RunUMAP(pancreas.ref, reduction = "integrated.cca", dims = 1:30)
 DimPlot(pancreas.ref, group.by = c("celltype", "tech"))
 ```
 
-![](integration_mapping_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+<img src="integration_mapping_files/figure-gfm/unnamed-chunk-7-1.png" style="display: block; margin: auto;" />
 
 ## Cell type classification using an integrated reference
 
@@ -152,7 +152,7 @@ table(pancreas.query$predicted.id)
 VlnPlot(pancreas.query, c("REG1A", "PPY", "SST", "GHRL", "VWF", "SOX10"), group.by = "predicted.id")
 ```
 
-![](integration_mapping_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+<img src="integration_mapping_files/figure-gfm/unnamed-chunk-11-1.png" style="display: block; margin: auto;" />
 
 ## Unimodal UMAP Projection
 
@@ -177,4 +177,4 @@ p2 <- DimPlot(pancreas.query, reduction = "ref.umap", group.by = "predicted.cell
 p1 + p2
 ```
 
-![](integration_mapping_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
+<img src="integration_mapping_files/figure-gfm/unnamed-chunk-13-1.png" style="display: block; margin: auto;" />
